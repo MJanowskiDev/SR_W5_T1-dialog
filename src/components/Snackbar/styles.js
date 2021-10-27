@@ -76,11 +76,10 @@ export const styles = {
 		justifyContent: 'space-between',
 		alignItems: 'center',
 		position: 'absolute',
-		margin: '10',
 		fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
 		fontWeight: 500,
 		letterSpacing: 1,
-		zIndex: 100,
+		zIndex: 1000,
 		margin: 10
 	},
 

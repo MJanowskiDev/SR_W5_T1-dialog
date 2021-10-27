@@ -9,6 +9,10 @@ const Snackbar = ({
 	anchorOrigin = { vertical: 'bottom', horizontal: 'right' },
 	severity
 }) => {
+	const handleOnClose = () => {
+		onClose && onClose();
+	};
+
 	useEffect(
 		() => {
 			const autoHideTimeout = setTimeout(() => handleOnClose(), autoHideDuration);
@@ -18,10 +22,6 @@ const Snackbar = ({
 		},
 		[ open ]
 	);
-
-	const handleOnClose = () => {
-		onClose && onClose();
-	};
 
 	if (!open) return null;
 
