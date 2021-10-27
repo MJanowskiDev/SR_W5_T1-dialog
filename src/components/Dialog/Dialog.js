@@ -17,11 +17,9 @@ const Dialog = ({ open, title, content, onClose, onAgree, onAbort }) => {
 	return (
 		<div className={classes.dialogBG}>
 			<div className={classes.dialog}>
-				{/* <div className={classes.dialogCloseDiv}> */}
 				<button className={classes.dialogCloseBtn} onClick={handleClose}>
 					X
 				</button>
-				{/* </div> */}
 				<h1 className={classes.dialogTitle}>{title}</h1>
 				<div className={classes.dialogContent}>
 					<p>{content}</p>

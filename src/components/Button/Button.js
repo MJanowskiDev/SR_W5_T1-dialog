@@ -1,6 +1,7 @@
 const styles = {
 	background: 'white',
 	padding: 10,
+	margin: 10,
 	letterSpacing: 1,
 	borderRadius: 6
 };

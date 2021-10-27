@@ -33,14 +33,12 @@
 
 .dialogCloseBtn{
     position: relative;
-    left: calc(100% - 16px );
+    left: calc(100% - 30px );
     top: 16px;
     background: none;
     border: none;
-    font-size: 22px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    font-size: 18px;
     color: rgba(0, 0, 0, 0.7);
-    border-radius: 6px;
 }
 
 .actionButtonsDiv{
@@ -60,9 +58,9 @@
 }
 
 .buttonConfirm{
-    border: 2px solid green;
+    border: 1px solid green;
 }
 
 .buttonAbort{
-    border: 2px solid red;
+    border: 1px solid red;
 }
