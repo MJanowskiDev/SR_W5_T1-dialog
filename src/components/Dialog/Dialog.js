@@ -1,5 +1,6 @@
 import React from 'react';
-import classes from './Dialog.module.css';
+import CloseButton from '../CloseButton/CloseButton';
+import { styles } from './styles';
 
 const Dialog = ({ open, title, content, onClose, onAgree, onAbort }) => {
 	const handleClose = () => {
@@ -15,21 +16,22 @@ const Dialog = ({ open, title, content, onClose, onAgree, onAbort }) => {
 	};
 	if (!open) return null;
 	return (
-		<div className={classes.dialogBG}>
-			<div className={classes.dialog}>
-				<button className={classes.dialogCloseBtn} onClick={handleClose}>
-					X
-				</button>
-				<h1 className={classes.dialogTitle}>{title}</h1>
-				<div className={classes.dialogContent}>
+		<div style={styles.dialogBG}>
+			<div style={styles.dialog}>
+				<div style={styles.closeContainer}>
+					<CloseButton onClick={handleClose} />
+				</div>
+
+				<h1 style={styles.dialogTitle}>{title}</h1>
+				<div style={styles.dialogContent}>
 					<p>{content}</p>
 				</div>
 
-				<div className={classes.actionButtonsDiv}>
-					<button className={`${classes.actionButton} ${classes.buttonConfirm}`} onClick={handleAgree}>
+				<div style={styles.actionButtonsDiv}>
+					<button style={{ ...styles.actionButton, ...styles.buttonConfirm }} onClick={handleAgree}>
 						Confirm
 					</button>
-					<button className={`${classes.actionButton} ${classes.buttonAbort}`} onClick={handleAbort}>
+					<button style={{ ...styles.actionButton, ...styles.buttonAbort }} onClick={handleAbort}>
 						Abort
 					</button>
 				</div>

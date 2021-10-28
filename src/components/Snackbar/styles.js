@@ -81,11 +81,5 @@ export const styles = {
 		letterSpacing: 1,
 		zIndex: 1000,
 		margin: 10
-	},
-
-	button: {
-		background: 'none',
-		border: 'unset',
-		fontSize: 18
 	}
 };

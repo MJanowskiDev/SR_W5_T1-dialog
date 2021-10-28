@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { styles, getStyleByAnchor, getSeverityStyle } from './styles';
 
+import CloseButton from '../CloseButton/CloseButton';
+
 const Snackbar = ({
 	open,
 	message,
@@ -28,10 +30,7 @@ const Snackbar = ({
 	return (
 		<div style={{ ...styles.snackbar, ...getStyleByAnchor(anchorOrigin), ...getSeverityStyle(severity) }}>
 			<div>{message}</div>
-
-			<button style={{ ...getSeverityStyle(severity), ...styles.button }} onClick={handleOnClose}>
-				x
-			</button>
+			<CloseButton style={{ ...getSeverityStyle(severity), border: 'unset' }} onClick={handleOnClose} />
 		</div>
 	);
 };

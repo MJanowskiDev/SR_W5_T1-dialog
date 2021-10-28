@@ -1,5 +1,6 @@
 import { styles } from './styles';
 import { Link, useLocation } from 'react-router-dom';
+import CloseButton from '../CloseButton/CloseButton';
 const NavMenu = ({ open, onClose, navItems }) => {
 	const pathname = useLocation().pathname;
 
@@ -14,9 +15,7 @@ const NavMenu = ({ open, onClose, navItems }) => {
 	return (
 		<div style={styles.container}>
 			<div style={styles.buttonContainer}>
-				<button style={styles.button} onClick={handleOnClose}>
-					x
-				</button>
+				<CloseButton onClick={handleOnClose} style={styles.button} />
 			</div>
 
 			<div style={styles.linksContainer}>
