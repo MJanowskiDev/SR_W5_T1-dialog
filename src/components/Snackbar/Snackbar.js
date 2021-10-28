@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 import { styles, getStyleByAnchor, getSeverityStyle } from './styles';
 
 import CloseButton from '../CloseButton/CloseButton';
@@ -11,9 +11,12 @@ const Snackbar = ({
 	anchorOrigin = { vertical: 'bottom', horizontal: 'right' },
 	severity
 }) => {
-	const handleOnClose = () => {
-		onClose && onClose();
-	};
+	const handleOnClose = useCallback(
+		() => {
+			onClose && onClose();
+		},
+		[ onClose ]
+	);
 
 	useEffect(
 		() => {
@@ -22,7 +25,7 @@ const Snackbar = ({
 				clearTimeout(autoHideTimeout);
 			};
 		},
-		[ open ]
+		[ open, autoHideDuration, handleOnClose ]
 	);
 
 	if (!open) return null;

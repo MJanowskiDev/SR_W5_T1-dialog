@@ -5,6 +5,9 @@
   flex-direction: column;
   width: 50vw;
   min-width: 600px;
+  text-align: justify;
+  margin-bottom: 32;
+
 }
 
 nav{
@@ -16,6 +19,7 @@ nav{
   display: flex;
   justify-content: flex-end;
   background: #eeeeee;
+ 
 
 }
 
@@ -25,4 +29,8 @@ nav{
   align-items: center;
   flex-direction: column;
   padding: 10px;
+  overflow-y: auto;
+  height: 100vh;
+
+
 }

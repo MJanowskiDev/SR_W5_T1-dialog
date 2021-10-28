@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Home, About, Contact } from './Pages';
 
-import NavMenu from './components/NavMenu';
-import Button from './components/Button';
+import { Home, About, Contact } from './Pages';
+import { NavMenu, Button } from './components';
+
 import './App.css';
 
 const navItems = [ { to: '/', title: 'Home' }, { to: '/contact', title: 'Contact' }, { to: '/about', title: 'About' } ];
