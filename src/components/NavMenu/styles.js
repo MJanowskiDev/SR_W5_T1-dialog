@@ -27,5 +27,12 @@ export const styles = {
 		flexDirection: 'column',
 		gap: 16,
 		color: 'white'
+	},
+	link: {
+		color: 'white',
+		textDecoration: 'none'
+	},
+	linkActive: {
+		color: '#ef5350'
 	}
 };
